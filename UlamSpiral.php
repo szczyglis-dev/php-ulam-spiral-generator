@@ -737,7 +737,13 @@ class UlamSpiral
 		}
 		.m_line_hdr {
 			background: #f5f5b6 !important;
-		}';
+		}
+		#matrix_status {
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+		}
+		';
     }
 
     /**
