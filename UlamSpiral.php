@@ -466,7 +466,7 @@ class UlamSpiral
         $render = '';
         if (!$this->config['raw']) {
             if ($this->config['append_css']) {
-                $render .= '<style>' . $this->getCSS() . '</style>';
+                $render .= $this->getCSS();
             }
             if ($this->config['append_js']) {
                 $render .= $this->getJavascript();
@@ -525,15 +525,14 @@ class UlamSpiral
 				var x_index = parseInt($(this).attr("data-x-index"));
 				var y_index = parseInt($(this).attr("data-y-index"));
 				var val = $(this).text();
-				var status = "val: "+val+"<br>x: "+x+"<br>y: "+y+"<br>x_index: "+x_index+"<br>y_index: "+y_index;
-				$("#matrix_status").html(status);
+				$("#matrix_status").html("val: "+val+"<br>x: "+x+"<br>y: "+y+"<br>x_index: "+x_index+"<br>y_index: "+y_index);
 				$(".hdr-y-"+y_index).addClass("m_line_hdr");
 				$(".hdr-x-"+x_index).addClass("m_line_hdr");				
 
 				// y-
 				var id_more = "matrix_"+x+"_"+(y-1);	
 				var is_more = false;	
-				if(document.getElementById(id_more)) {			
+				if (document.getElementById(id_more)) {			
 					y = y - 1;
 					is_more = true;
 				}
@@ -541,7 +540,7 @@ class UlamSpiral
 					var id_now = "matrix_"+x+"_"+y;
 					$("#" + id_now).addClass("m_line");
 					var id_more = "matrix_"+x+"_"+(y-1);
-					if(document.getElementById(id_more)) {
+					if (document.getElementById(id_more)) {
 						y = y - 1;
 						is_more = true;
 					} else {
@@ -552,7 +551,7 @@ class UlamSpiral
 				// y+
 				id_more = "matrix_"+x+"_"+(my_y+1);	
 				is_more = false;	
-				if(document.getElementById(id_more)) {			
+				if (document.getElementById(id_more)) {			
 					y = my_y + 1;
 					is_more = true;
 				}
@@ -560,7 +559,7 @@ class UlamSpiral
 					var id_now = "matrix_"+x+"_"+y;
 					$("#" + id_now).addClass("m_line");
 					var id_more = "matrix_"+x+"_"+(y+1);
-					if(document.getElementById(id_more)) {
+					if (document.getElementById(id_more)) {
 						y = y + 1;
 						is_more = true;
 					} else {
@@ -571,7 +570,7 @@ class UlamSpiral
 				// x-				
 				is_more = false;
 				id_more = "matrix_"+(x-1)+"_"+my_y;		
-				if(document.getElementById(id_more)) {			
+				if (document.getElementById(id_more)) {			
 					x = x - 1;
 					is_more = true;
 				}
@@ -579,7 +578,7 @@ class UlamSpiral
 					var id_now = "matrix_"+x+"_"+my_y;
 					$("#" + id_now).addClass("m_line");
 					var id_more = "matrix_"+(x-1)+"_"+my_y;
-					if(document.getElementById(id_more)) {
+					if (document.getElementById(id_more)) {
 						x = x - 1;
 						is_more = true;
 					} else {
@@ -587,10 +586,10 @@ class UlamSpiral
 					}
 				}
 
-				// +
+				// x +
 				is_more = false;
 				id_more = "matrix_"+(my_x+1)+"_"+my_y;		
-				if(document.getElementById(id_more)) {			
+				if (document.getElementById(id_more)) {			
 					x = my_x + 1;
 					is_more = true;
 				}
@@ -598,7 +597,7 @@ class UlamSpiral
 					var id_now = "matrix_"+x+"_"+my_y;
 					$("#" + id_now).addClass("m_line");
 					var id_more = "matrix_"+(x+1)+"_"+my_y;
-					if(document.getElementById(id_more)) {
+					if (document.getElementById(id_more)) {
 						x = x + 1;
 						is_more = true;
 					} else {
@@ -609,7 +608,7 @@ class UlamSpiral
 				// cross x- y-		
 				is_more = false;
 				id_more = "matrix_"+(my_x-1)+"_"+(my_y-1);		
-				if(document.getElementById(id_more)) {			
+				if (document.getElementById(id_more)) {			
 					x = my_x - 1;
 					y = my_y - 1;
 					is_more = true;
@@ -618,7 +617,7 @@ class UlamSpiral
 					var id_now = "matrix_"+x+"_"+y;
 					$("#" + id_now).addClass("m_line");
 					var id_more = "matrix_"+(x-1)+"_"+(y-1);
-					if(document.getElementById(id_more)) {
+					if (document.getElementById(id_more)) {
 						x = x - 1;
 						y = y - 1;
 						is_more = true;
@@ -630,7 +629,7 @@ class UlamSpiral
 				// cross x+ y+		
 				is_more = false;
 				id_more = "matrix_"+(my_x+1)+"_"+(my_y+1);		
-				if(document.getElementById(id_more)) {			
+				if (document.getElementById(id_more)) {			
 					x = my_x + 1;
 					y = my_y + 1;
 					is_more = true;
@@ -639,7 +638,7 @@ class UlamSpiral
 					var id_now = "matrix_"+x+"_"+y;
 					$("#" + id_now).addClass("m_line");
 					var id_more = "matrix_"+(x+1)+"_"+(y+1);
-					if(document.getElementById(id_more)) {
+					if (document.getElementById(id_more)) {
 						x = x + 1;
 						y = y + 1;
 						is_more = true;
@@ -651,7 +650,7 @@ class UlamSpiral
 				// cross x- y+		
 				is_more = false;
 				id_more = "matrix_"+(my_x-1)+"_"+(my_y+1);		
-				if(document.getElementById(id_more)) {			
+				if (document.getElementById(id_more)) {			
 					x = my_x - 1;
 					y = my_y + 1;
 					is_more = true;
@@ -660,7 +659,7 @@ class UlamSpiral
 					var id_now = "matrix_"+x+"_"+y;
 					$("#" + id_now).addClass("m_line");
 					var id_more = "matrix_"+(x-1)+"_"+(y+1);
-					if(document.getElementById(id_more)) {
+					if (document.getElementById(id_more)) {
 						x = x - 1;
 						y = y + 1;
 						is_more = true;
@@ -672,7 +671,7 @@ class UlamSpiral
 				// cross x+ y-		
 				is_more = false;
 				id_more = "matrix_"+(my_x+1)+"_"+(my_y-1);		
-				if(document.getElementById(id_more)) {			
+				if (document.getElementById(id_more)) {			
 					x = my_x + 1;
 					y = my_y - 1;
 					is_more = true;
@@ -681,7 +680,7 @@ class UlamSpiral
 					var id_now = "matrix_"+x+"_"+y;
 					$("#" + id_now).addClass("m_line");
 					var id_more = "matrix_"+(x+1)+"_"+(y-1);
-					if(document.getElementById(id_more)) {
+					if (document.getElementById(id_more)) {
 						x = x + 1;
 						y = y - 1;
 						is_more = true;
@@ -709,6 +708,7 @@ class UlamSpiral
     public function getCSS()
     {
         return '
+        <style>
 		.table .hdr {
 			background: #fbfbfb;
 			font-weight: bold;
@@ -727,12 +727,12 @@ class UlamSpiral
 			border:1px solid #000;	
 		}
 		.num_c {
-			font-weight: 
-			bold;color:red; 
-			font-size:13px;
+			font-weight: bold;
+			bold;color: ##ff0000; 
+			font-size: 13px;
 		}
 		.m_line {
-			border:1px solid #f63b3b !important;
+			border: 1px solid #f63b3b !important;
 			color:red  !important;
 		}
 		.m_line_hdr {
@@ -743,7 +743,7 @@ class UlamSpiral
 			bottom: 10px;
 			right: 10px;
 		}
-		';
+		</style>';
     }
 
     /**
