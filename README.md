@@ -199,4 +199,4 @@ MIT License | 2020 Marcin 'szczyglis' Szczygliński
 
 https://github.com/szczyglis-dev/php-ulam-spiral-generator
 
-Contact: szczyglis ("12 Monkeys" movie is awesome) protonmail.com
+Contact: szczyglis@protonmail.com
