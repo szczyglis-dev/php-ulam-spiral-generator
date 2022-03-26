@@ -186,7 +186,7 @@ $ulam->addCounter('even', function($value) {
 
 ### Ulam Spiral Generator is free to use but if you liked then you can donate project via BTC: 
 
-**1LK9tDPBuBFXCKUThFWXNvdcdJ4gzx1Diz**
+**14X6zSCbkU5wojcXZMgT9a4EnJNcieTrcr**
 
 or by PayPal:
  **[https://www.paypal.me/szczyglinski](https://www.paypal.me/szczyglinski)**
