@@ -14,7 +14,7 @@ from https://en.wikipedia.org/wiki/Ulam_spiral:
 ![300px-Ulam_1](https://user-images.githubusercontent.com/61396542/75210085-6d55ee80-5780-11ea-86fd-ab6bcabdab88.png)
 
 
-**Install with composer:**
+## How to install:
 ```
 composer require szczyglis/php-ulam-spiral-generator
 ``` 
