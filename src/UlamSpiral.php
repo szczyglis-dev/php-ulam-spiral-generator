@@ -1,38 +1,40 @@
 <?php
 
+namespace Szczyglis\UlamSpiralGenerator;
+
 /**
  * @package Ulam Spiral Generator
  * @author Marcin Szczyglinski <szczyglis@protonmail.com>
  * @link https://github.com/szczyglis-dev/php-ulam-spiral-generator
  * @license MIT
- * @version 1.0 | 2020.02.25
+ * @version 1.1 | 2021.04.23
  */
 class UlamSpiral
 {
     /**
      * @var array
      */
-    public $dataset = [];
+    private $dataset = [];
 
     /**
      * @var array
      */
-    public $matrix = [];
+    private $matrix = [];
 
     /**
      * @var array
      */
-    public $coords = [];
+    private $coords = [];
 
     /**
      * @var array
      */
-    public $config = [];
+    private $config = [];
 
     /**
      * @var array
      */
-    public $dataIndexed = [];
+    private $dataIndexed = [];
 
     /**
      * @var array
@@ -752,5 +754,165 @@ class UlamSpiral
     public function __toString()
     {
         return (string)$this->render();
+    }
+
+    /**
+     * @return array
+     */
+    public function getDataset()
+    {
+        return $this->dataset;
+    }
+
+    /**
+     * @param array $dataset
+     *
+     * @return self
+     */
+    public function setDataset(array $dataset)
+    {
+        $this->dataset = $dataset;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMatrix()
+    {
+        return $this->matrix;
+    }
+
+    /**
+     * @param array $matrix
+     *
+     * @return self
+     */
+    public function setMatrix(array $matrix)
+    {
+        $this->matrix = $matrix;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCoords()
+    {
+        return $this->coords;
+    }
+
+    /**
+     * @param array $coords
+     *
+     * @return self
+     */
+    public function setCoords(array $coords)
+    {
+        $this->coords = $coords;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
+    /**
+     * @param array $config
+     *
+     * @return self
+     */
+    public function setConfig(array $config)
+    {
+        $this->config = $config;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDataIndexed()
+    {
+        return $this->dataIndexed;
+    }
+
+    /**
+     * @param array $dataIndexed
+     *
+     * @return self
+     */
+    public function setDataIndexed(array $dataIndexed)
+    {
+        $this->dataIndexed = $dataIndexed;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCounters()
+    {
+        return $this->counters;
+    }
+
+    /**
+     * @param array $counters
+     *
+     * @return self
+     */
+    public function setCounters(array $counters)
+    {
+        $this->counters = $counters;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCounterCallbacks()
+    {
+        return $this->counterCallbacks;
+    }
+
+    /**
+     * @param array $counterCallbacks
+     *
+     * @return self
+     */
+    public function setCounterCallbacks(array $counterCallbacks)
+    {
+        $this->counterCallbacks = $counterCallbacks;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMarkerCallbacks()
+    {
+        return $this->markerCallbacks;
+    }
+
+    /**
+     * @param array $markerCallbacks
+     *
+     * @return self
+     */
+    public function setMarkerCallbacks(array $markerCallbacks)
+    {
+        $this->markerCallbacks = $markerCallbacks;
+
+        return $this;
     }
 }

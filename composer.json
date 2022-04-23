@@ -1,0 +1,32 @@
+{
+    "name": "szczyglis/php-ulam-spiral-generator",
+    "description": "Mathematic Ulam spiral generator and renderer with programmable callbacks written in PHP.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/szczyglis-dev/php-ulam-spiral-generator",
+    "autoload": {
+        "psr-4": {
+            "Szczyglis\\UlamSpiralGenerator\\": "src/"
+        }
+    },
+    "keywords": [
+        "math",
+        "mathematic",
+        "ulam-spiral",
+        "ulam",
+        "generator",
+        "alghoritm",
+        "prime numbers"
+    ],
+    "authors": [
+        {
+            "name": "szczyglis",
+            "email": "szczyglis@protonmail.com",
+            "homepage": "https://szczyglis.dev"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2.5"
+    }
+}
