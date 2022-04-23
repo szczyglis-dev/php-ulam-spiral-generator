@@ -5,6 +5,8 @@ Current version: 1.0
 
 Mathematic Ulam spiral generator and renderer with programmable callbacks written in PHP.
 
+## Live Demo: https://szczyglis.dev/ulam-spiral-generator
+
 ## What is Ulam spiral?
 from https://en.wikipedia.org/wiki/Ulam_spiral:
 > The Ulam spiral or prime spiral is a graphical depiction of the set of prime numbers, devised by mathematician Stanisław Ulam in 1963 and popularized in Martin Gardner's Mathematical Games column in Scientific American a short time later. It is constructed by writing the positive integers in a square spiral and specially marking the prime numbers. [...]
