@@ -30,6 +30,7 @@ composer require szczyglis/php-ulam-spiral-generator
 ## Usage example:
 ```php
 <?php
+// app.php
 
 require __DIR__ . '/vendor/autoload.php';
 
