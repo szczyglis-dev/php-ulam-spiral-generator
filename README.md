@@ -209,6 +209,4 @@ https://github.com/szczyglis-dev/php-ulam-spiral-generator
 
 https://szczyglis.dev/ulam-spiral-generator
 
-https://szczyglis.dev
-
 Contact: szczyglis@protonmail.com
