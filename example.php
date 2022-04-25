@@ -1,10 +1,26 @@
 <?php
 
+/**
+ * This file is part of szczyglis/php-ulam-spiral-generator.
+ *
+ * (c) Marcin Szczyglinski <szczyglis@protonmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 require __DIR__ . '/vendor/autoload.php';
 
 use Szczyglis\UlamSpiralGenerator\UlamSpiral;
 
-// configuration
+/**
+ * @package szczyglis/php-ulam-spiral-generator
+ * @author Marcin Szczyglinski <szczyglis@protonmail.com>
+ * @copyright 2022 Marcin Szczyglinski
+ * @license   http://www.opensource.org/licenses/MIT The MIT License
+ * @link https://github.com/szczyglis-dev/szczyglis/php-ulam-spiral-generator
+ */
+
 $config = [ 
 	'raw' => false, // if true then displays raw spiral (without CSS)
 	'append_css' => true, // enables CSS stylizing

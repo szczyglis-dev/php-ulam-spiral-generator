@@ -1,13 +1,22 @@
 <?php
 
+/**
+ * This file is part of szczyglis/php-ulam-spiral-generator.
+ *
+ * (c) Marcin Szczyglinski <szczyglis@protonmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Szczyglis\UlamSpiralGenerator;
 
 /**
- * @package Ulam Spiral Generator
+ * @package szczyglis/php-ulam-spiral-generator
  * @author Marcin Szczyglinski <szczyglis@protonmail.com>
- * @link https://github.com/szczyglis-dev/php-ulam-spiral-generator
- * @license MIT
- * @version 1.1 | 2021.04.23
+ * @copyright 2022 Marcin Szczyglinski
+ * @license   http://www.opensource.org/licenses/MIT The MIT License
+ * @link https://github.com/szczyglis-dev/szczyglis/php-ulam-spiral-generator
  */
 class UlamSpiral
 {
