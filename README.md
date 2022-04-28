@@ -1,5 +1,5 @@
 # [PHP] Ulam Spiral Generator
-PHP **7.2.5+**, current release: **1.2.1** build 2022-04-25
+PHP **7.2.5+, 8.0+**, current release: **1.2.2** build 2022-04-28
 
 Mathematic Ulam spiral generator and renderer with programmable callbacks written in PHP.
 
@@ -193,6 +193,8 @@ $ulam->addCounter('even', function($value) {
 - `1.2` -- package was added to packagist (2022-04-23)
 
 - `1.2.1` -- updated PHPDoc (2022-04-25)
+- 
+- `1.2.2` -- updated composer.json (2022-04-28)
 
 ### Ulam Spiral Generator is free to use but if you liked then you can donate project via BTC: 
 
