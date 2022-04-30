@@ -1,5 +1,6 @@
-# [PHP] Ulam Spiral Generator
 PHP **7.2.5+, 8.0+**, current release: **1.2.2** build 2022-04-28
+
+# Ulam Spiral Generator
 
 Mathematic Ulam spiral generator and renderer with programmable callbacks written in PHP.
 
