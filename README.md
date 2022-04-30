@@ -191,9 +191,7 @@ $ulam->addCounter('even', function($value) {
 ### Changelog 
 
 - `1.2` -- package was added to packagist (2022-04-23)
-
 - `1.2.1` -- updated PHPDoc (2022-04-25)
-- 
 - `1.2.2` -- updated composer.json (2022-04-28)
 
 ### Ulam Spiral Generator is free to use but if you liked then you can donate project via BTC: 
