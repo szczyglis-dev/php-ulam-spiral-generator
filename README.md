@@ -2,7 +2,7 @@ PHP **7.2.5+, 8.0+**, current release: **1.2.2** build 2022-04-28
 
 # Ulam Spiral Generator
 
-Mathematic Ulam spiral generator and renderer with programmable callbacks written in PHP.
+A mathematical Ulam spiral generator and renderer with programmable callbacks written in PHP.
 
 ## Live Demo: https://szczyglis.dev/ulam-spiral-generator
 
@@ -20,12 +20,12 @@ composer require szczyglis/php-ulam-spiral-generator
 
 ## Features:
 
-- Ulam spiral matrix builder working with any dataset
-- Built in on-screen spiral renderer (as HTML table or raw data)
-- For standalone and external usage (it is only one PHP class)
-- Easy to use
-- Programmable callbacks for in rows and columns number highlighting and counting 
-- Javascript-based real-time rows/columns/crosses highlighter
+- Ulam spiral matrix builder compatible with any dataset.
+- Built-in on-screen spiral renderer (as an HTML table or raw data).
+- Suitable for standalone and external usage (consists of a single PHP class).
+- Programmable callbacks for highlighting and counting numbers in rows and columns.
+- JavaScript-based real-time highlighter for rows, columns, and crosses.
+- Easy to use.
 
 
 ## Usage example:
@@ -79,9 +79,9 @@ echo $ulam->render(); // render spiral
 $matrix = $ulam->getMatrix(); // returns spiral's matrix
 
 ```
-You can use any PHP array filled by numbers/or chars in `$ulam->dataset`, all values from array will be placed on spiral.
+You can use any PHP array filled with numbers or characters in the `$ulam->dataset`. All values from the array will be placed in the spiral.
 
-After execute`$ulam->buildMatrix()`, the matrix created by this method will be available in `$ulam->matrix` array, x and y coords accorded to placed on spiral values will be available in `$ulam->coords` array. You have access to matrix with `$ulam->getMatrix()` method.
+After executing `$ulam->buildMatrix()`, the matrix created by this method will be available in the `$ulam->matrix` array. The x and y coordinates corresponding to the values placed in the spiral will be available in the `$ulam->coords` array. You can access the matrix using the `$ulam->getMatrix()` method.
 
 ## Screenshots:
 
@@ -98,44 +98,35 @@ Raw version:
 
 ## Repository includes:
 
-- `src/UlamSpiral.php` - base class
+- `src/UlamSpiral.php` - Base class
 
-- `example.php` - usage example
+- `example.php` - Usage example
 
 ## Configuration:
 
-You can configure generator by creating `$config` array and put it into constructor. 
+You can configure the generator by creating a `$config` array and passing it into the constructor.
 
-All keys in an array are described below:
+All keys in the array are described below:
 
-`raw` (bool) - `[true|false]` if true then displays raw spiral (without CSS), default: `false`
-
-`append_css` (bool) - `[true|false]` enables CSS, default: `true`
-
-`append_js` (bool) - `[true|false]` enables JS, default: `true`
-
-`no_append_jquery` (bool) `[true|false]` - disables jQuery script appending, default: `false`
-
-`counters_mode` (string) `[sum|count]` - sets counters mode (sum of values or occurencies count), default: `count`
-
-`row_counters` (bool) `[true|false]` - enables vertical counters, default: `true`
-
-`col_counters` (bool) `[true|false]` - enables horizontal counters, default: `true`
-
-`cell_width` (int) - sets width of cell in pixels, default: `35`
-
-`cell_height` (int) - sets height of cell in pixels, default: `35`
-
-`cell_font_size` (int) - sets font size in pixels, default: `15`
+- `raw` (bool) - `[true|false]` If `true`, displays a raw spiral (without CSS). Default: `false`
+- `append_css` (bool) - `[true|false]` Enables CSS. Default: `true`
+- `append_js` (bool) - `[true|false]` Enables JavaScript. Default: `true`
+- `no_append_jquery` (bool) - `[true|false]` Disables appending of the jQuery script. Default: `false`
+- `counters_mode` (string) - `[sum|count]` Sets the counters mode (sum of values or count of occurrences). Default: `count`
+- `row_counters` (bool) - `[true|false]` Enables vertical counters. Default: `true`
+- `col_counters` (bool) - `[true|false]` Enables horizontal counters. Default: `true`
+- `cell_width` (int) - Sets the width of each cell in pixels. Default: `35`
+- `cell_height` (int) - Sets the height of each cell in pixels. Default: `35`
+- `cell_font_size` (int) - Sets the font size in pixels. Default: `15`
 
 
 ## Defining custom callbacks:
 
-### Numbers highlighting
+### Number Highlighting
 
-You can create your own marker callback for highlight specified numbers (e.g. prime numbers, even numbers, numbers greater than specified one, etc.). Callback takes one argument with current number and must return `HTML color code` with which to highlight. If callback returns `null` or `false` then number will not be affected. You can create as many markers as you like, each one for a different number type.
+You can create your own marker callback to highlight specific numbers (e.g., prime numbers, even numbers, numbers greater than a specified value, etc.). The callback takes one argument, which is the current number, and must return an HTML color code to use for highlighting. If the callback returns `null` or `false`, the number will not be affected. You can create as many markers as you like, each for a different type of number.
 
-Example shows how to create marker callback for even numbers:
+The following example demonstrates how to create a marker callback for even numbers:
 
 ```php
 $ulam = new UlamSpiral();
@@ -148,20 +139,22 @@ $ulam->addMarker('even', function($value) {
 });
 ```
 
-### Screenshot with even numbers highlighted:
+### Screenshot with Even Numbers highlighted:
 
 ![mark_even](https://user-images.githubusercontent.com/61396542/75211118-4c42cd00-5783-11ea-94ad-4fc9075d5ccc.png)
 
-### Screenshot with prime numbers highlighted:
+### Screenshot with Prime Numbers highlighted:
 
 ![mark_prime](https://user-images.githubusercontent.com/61396542/75211085-359c7600-5783-11ea-932f-dba29e17c94c.png)
 
 
-### Numbers counters per row/column
+### Number Counters per Row/Column
 
-Counter callbacks are for creating counters in spiral headers (horizontal and vertical). Counters can count specific numbers in row or column and display a result in row or column header. There are 2 types of counters: `count` and `sum`. You can choose behaviour in config. First type - `count` counts all occurencies of specified type of numbers in row or column, second type: `sum` displays sum of their values. If callback returns `true` then number will be affected by counter. you can create as many counters as you like, each one for a different number type. 
+Counter callbacks are used for creating counters in the spiral headers (horizontal and vertical). Counters can count specific numbers in a row or column and display the result in the row or column header. There are two types of counters: `count` and `sum`. You can choose the behavior in the config. 
 
-Example shows how to create counter callback for even numbers:
+The first type - `count` - counts all occurrences of a specified type of number in a row or column. The second type - `sum` - displays the sum of their values. If the callback returns `true`, then the number will be affected by the counter. You can create as many counters as you like, each for a different type of number.
+
+The following example shows how to create a counter callback for even numbers:
 
 ```php
 $ulam = new UlamSpiral();
@@ -174,26 +167,26 @@ $ulam->addCounter('even', function($value) {
 });
 
 ```
-### Screenshot with even numbers counted in header:
+### Screenshot with Even Numbers counted in header:
 
 ![count_even](https://user-images.githubusercontent.com/61396542/75210943-d179b200-5782-11ea-8a7a-76ef1133fc90.png)
 
 
-### Screenshot with prime numbers counted in header:
+### Screenshot with Prime Numbers counted in header:
 
 ![nnnn](https://user-images.githubusercontent.com/61396542/75220518-e6187300-579f-11ea-9645-6911c925f0eb.png)
 
 
-## Highlighting rows, columns and crosses on mouse hover is also included:
+## Highlighting Rows, Columns, and Crosses on Mouse Hover:
 
 ![hhhhhh](https://user-images.githubusercontent.com/61396542/75211828-77c6b700-5785-11ea-9161-a2de9d80500d.png)
 
 
 ### Changelog 
 
-- `1.2` -- package was added to packagist (2022-04-23)
-- `1.2.1` -- updated PHPDoc (2022-04-25)
-- `1.2.2` -- updated composer.json (2022-04-28)
+- `1.2.0` - Package added to Packagist (2022-04-23)
+- `1.2.1` - Updated PHPDoc (2022-04-25)
+- `1.2.2` - Updated composer.json (2022-04-28)
 
 --- 
 **Ulam Spiral Generator is free to use, but if you like it, you can support my work by buying me a coffee ;)**
