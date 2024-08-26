@@ -1,6 +1,6 @@
 {
     "name": "szczyglis/php-ulam-spiral-generator",
-    "description": "Mathematic Ulam spiral generator and renderer with programmable callbacks written in PHP.",
+    "description": "A mathematical Ulam spiral generator and renderer with programmable callbacks written in PHP.",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/szczyglis-dev/php-ulam-spiral-generator",
@@ -11,11 +11,11 @@
     },
     "keywords": [
         "math",
-        "mathematic",
+        "mathematics",
         "ulam-spiral",
         "ulam",
         "generator",
-        "alghoritm",
+        "algorithm",
         "prime numbers"
     ],
     "authors": [

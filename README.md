@@ -1,4 +1,4 @@
-PHP **7.2.5+, 8.0+**, current release: **1.2.2** build 2022-04-28
+Release: **1.2.3** | build: **2024.08.26** | PHP: **^7.2.5|^8.0**
 
 # Ulam Spiral Generator
 
@@ -13,12 +13,12 @@ from https://en.wikipedia.org/wiki/Ulam_spiral:
 ![300px-Ulam_1](https://user-images.githubusercontent.com/61396542/75210085-6d55ee80-5780-11ea-86fd-ab6bcabdab88.png)
 
 
-## How to install:
+## How to install
 ```
 composer require szczyglis/php-ulam-spiral-generator
 ``` 
 
-## Features:
+## Features
 
 - Ulam spiral matrix builder compatible with any dataset.
 - Built-in on-screen spiral renderer (as an HTML table or raw data).
@@ -28,7 +28,7 @@ composer require szczyglis/php-ulam-spiral-generator
 - Easy to use.
 
 
-## Usage example:
+## Usage example
 ```php
 <?php
 // app.php
@@ -83,7 +83,7 @@ You can use any PHP array filled with numbers or characters in the `$ulam->datas
 
 After executing `$ulam->buildMatrix()`, the matrix created by this method will be available in the `$ulam->matrix` array. The x and y coordinates corresponding to the values placed in the spiral will be available in the `$ulam->coords` array. You can access the matrix using the `$ulam->getMatrix()` method.
 
-## Screenshots:
+## Screenshots
 
 CSS-styled version:
 
@@ -96,13 +96,13 @@ Raw version:
 
 
 
-## Repository includes:
+## Repository includes
 
 - `src/UlamSpiral.php` - Base class
 
 - `example.php` - Usage example
 
-## Configuration:
+## Configuration
 
 You can configure the generator by creating a `$config` array and passing it into the constructor.
 
@@ -120,7 +120,7 @@ All keys in the array are described below:
 - `cell_font_size` (int) - Sets the font size in pixels. Default: `15`
 
 
-## Defining custom callbacks:
+## Defining custom callbacks
 
 ### Number Highlighting
 
@@ -139,11 +139,11 @@ $ulam->addMarker('even', function($value) {
 });
 ```
 
-### Screenshot with Even Numbers highlighted:
+### Screenshot with Even Numbers highlighted
 
 ![mark_even](https://user-images.githubusercontent.com/61396542/75211118-4c42cd00-5783-11ea-94ad-4fc9075d5ccc.png)
 
-### Screenshot with Prime Numbers highlighted:
+### Screenshot with Prime Numbers highlighted
 
 ![mark_prime](https://user-images.githubusercontent.com/61396542/75211085-359c7600-5783-11ea-932f-dba29e17c94c.png)
 
@@ -167,17 +167,17 @@ $ulam->addCounter('even', function($value) {
 });
 
 ```
-### Screenshot with Even Numbers counted in header:
+### Screenshot with Even Numbers counted in header
 
 ![count_even](https://user-images.githubusercontent.com/61396542/75210943-d179b200-5782-11ea-8a7a-76ef1133fc90.png)
 
 
-### Screenshot with Prime Numbers counted in header:
+### Screenshot with Prime Numbers counted in header
 
 ![nnnn](https://user-images.githubusercontent.com/61396542/75220518-e6187300-579f-11ea-9645-6911c925f0eb.png)
 
 
-## Highlighting Rows, Columns, and Crosses on Mouse Hover:
+## Highlighting Rows, Columns, and Crosses on Mouse Hover
 
 ![hhhhhh](https://user-images.githubusercontent.com/61396542/75211828-77c6b700-5785-11ea-9161-a2de9d80500d.png)
 
@@ -187,6 +187,7 @@ $ulam->addCounter('even', function($value) {
 - `1.2.0` - Package added to Packagist (2022-04-23)
 - `1.2.1` - Updated PHPDoc (2022-04-25)
 - `1.2.2` - Updated composer.json (2022-04-28)
+- `1.2.3` - Fixed repository URL and updated README (2024-08-26)
 
 --- 
 **Ulam Spiral Generator is free to use, but if you like it, you can support my work by buying me a coffee ;)**
