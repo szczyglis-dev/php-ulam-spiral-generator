@@ -16,7 +16,7 @@ namespace Szczyglis\UlamSpiralGenerator;
  * @author Marcin Szczyglinski <szczyglis@protonmail.com>
  * @copyright 2022 Marcin Szczyglinski
  * @license   http://www.opensource.org/licenses/MIT The MIT License
- * @link https://github.com/szczyglis-dev/szczyglis/php-ulam-spiral-generator
+ * @link https://github.com/szczyglis-dev/php-ulam-spiral-generator
  */
 class UlamSpiral
 {
